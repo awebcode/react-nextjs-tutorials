@@ -8,7 +8,7 @@ interface Props extends ButtonProps {
   pendingText?: string
   isPending?: boolean
 }
-const PendingButton = ({ className,pendingText="Sending...", ...props }: Props) => {
+const PendingButton = ({ className,pendingText, ...props }: Props) => {
   const { pending } = useFormStatus();
   const PendingOrIsPending=pending || props.isPending
   return (
